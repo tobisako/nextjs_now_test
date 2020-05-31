@@ -4,48 +4,16 @@ import GoogleMap from '../components/googlemap'
 const Home = () => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>minna air map demo</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-      <GoogleMap />
-
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
+      <img src="/minden.svg" />
+      <h1 className="title">みんなエアー</h1>
+      空気スポット検索
+      <img src="/air_title.png" width="30%" />
+      <div className="box">
+        <GoogleMap>a</GoogleMap>
       </div>
     </main>
 
@@ -55,13 +23,12 @@ const Home = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" />
+        Powered by <img src="/minden.svg" alt="minden Logo" />
       </a>
     </footer>
 
     <style jsx>{`
       .container {
-        min-height: 100vh;
         padding: 0 0.5rem;
         display: flex;
         flex-direction: column;
@@ -69,8 +36,14 @@ const Home = () => (
         align-items: center;
       }
 
+      .box {
+        height: 70vh;
+        width: 100%;
+      }
+
       main {
-        padding: 5rem 0;
+        background-image: url(/air_title.png);
+        padding: 1rem 0;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -102,6 +75,14 @@ const Home = () => (
         text-decoration: none;
       }
 
+      .description {
+        height: 10px;
+        line-height: 1.5;
+        font-size: 1.5rem;
+        align-items: left;
+        text-align: left;
+      }
+
       .title a {
         color: #0070f3;
         text-decoration: none;
@@ -119,14 +100,8 @@ const Home = () => (
         font-size: 4rem;
       }
 
-      .title,
-      .description {
+      .title {
         text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
       }
 
       code {
